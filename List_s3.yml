@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Get simple S3 bucket list
+      aws_s3_bucket_info:
+      register: bucket_list
+
+    - debug:
+        var: bucket_list
+
