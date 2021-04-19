@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name : List ec2 instances
+      community.aws.ec2_instance_info:
+      register: instance_list
+
+    - debug:
+        var: instance_list
+                                                                                                
